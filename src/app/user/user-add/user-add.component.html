@@ -1,0 +1,21 @@
+<form>
+    <p><label for="nombre">nombre: </label> </p>
+    <p><input type="text" id="nombre" [(ngModel)]= userData.name name="nombre"></p>
+
+    <p><label for="gender">genero: </label> </p>
+    <p><input type="text" id="gender" [(ngModel)]= userData.gender name="gender"></p>
+
+    <p><label for="company">age: </label> </p>
+    <p><input type="text" id="age" [(ngModel)]= userData.age name="age"></p>
+
+    <p><label for="email">email: </label> </p>
+    <p><input type="text" id="email" [(ngModel)]= userData.email name="email"></p>
+
+    <p><label for="phone">phone: </label> </p>
+    <p><input type="text" id="phone" [(ngModel)]= userData.phone name="phone"></p>
+
+    <p><label for="telefono"> address: </label> </p>
+    <p><input type="text" id="address" [(ngModel)]= userData.address name="telefono"></p>
+
+    <p><input type="button" (click)="addUser()" value="Añadir Usuario" class="btn btn-primary"></p>
+  </form>

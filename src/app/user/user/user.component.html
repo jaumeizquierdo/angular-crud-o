@@ -1,0 +1,14 @@
+<div class="card mb-3">
+  <div class="card-body">
+      <h3 class="mb-3">{{user.name}}</h3>
+      <ul class="mb-0 py-0 px-4">
+        <li class="mb-2"><strong>Email:</strong> {{user.email}}</li>
+        <li class="mb-2"><strong>Address:</strong> {{user.address}}</li>
+        <li class="mb-2"><strong>Phone:</strong> {{user.phone}}</li>
+        <li class="mb-2"><strong>Company:</strong> {{user.company}}</li>
+        <li><strong>Gender:</strong> {{user.gender}}</li>
+      </ul>
+  </div>
+</div>
+
+<a [routerLink]="['/users']" class="btn btn-primary">Volver</a>
