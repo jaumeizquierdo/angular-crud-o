@@ -1,5 +1,6 @@
-<ul>
-  <li *ngFor='let user of users' class="mb-2">
+<ul class="list-group">
+  <li *ngFor='let user of users' class="list-group-item d-flex justify-content-between">
     <a [routerLink] = "['/user', user.id]">{{ user.name }}</a>
+    <button (click)='deleteUser(user.id)' mat-raised-button color="warn">delete</button>
   </li>
 </ul>

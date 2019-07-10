@@ -1,21 +1,39 @@
-<form>
-    <p><label for="nombre">nombre: </label> </p>
-    <p><input type="text" id="nombre" [(ngModel)]= userData.name name="nombre"></p>
+<div class="card">
+  <div class="card-body">
+      <form>
 
-    <p><label for="gender">genero: </label> </p>
-    <p><input type="text" id="gender" [(ngModel)]= userData.gender name="gender"></p>
+          <div class="form-group">
+            <label for="nombre">nombre: </label>
+            <input type="text" id="nombre" [(ngModel)]= userData.name name="nombre" class="form-control">
+          </div>
 
-    <p><label for="company">age: </label> </p>
-    <p><input type="text" id="age" [(ngModel)]= userData.age name="age"></p>
+          <div class="form-group">
+            <label for="gender">genero: </label>
+            <input type="text" id="gender" [(ngModel)]= userData.gender name="gender" class="form-control">
+          </div>
 
-    <p><label for="email">email: </label> </p>
-    <p><input type="text" id="email" [(ngModel)]= userData.email name="email"></p>
+          <div class="form-group">
+            <label for="company">age: </label>
+            <input type="text" id="age" [(ngModel)]= userData.age name="age" class="form-control">
+          </div>
 
-    <p><label for="phone">phone: </label> </p>
-    <p><input type="text" id="phone" [(ngModel)]= userData.phone name="phone"></p>
+          <div class="form-group">
+            <label for="email">email: </label>
+            <input type="text" id="email" [(ngModel)]= userData.email name="email" class="form-control">
+          </div>
 
-    <p><label for="telefono"> address: </label> </p>
-    <p><input type="text" id="address" [(ngModel)]= userData.address name="telefono"></p>
+           <div class="form-group">
+            <label for="phone">phone: </label>
+            <input type="text" id="phone" [(ngModel)]= userData.phone name="phone" class="form-control">
+          </div>
 
-    <p><input type="button" (click)="addUser()" value="Añadir Usuario" class="btn btn-primary"></p>
-  </form>
+          <div class="form-group">
+            <label for="telefono"> address: </label>
+            <input type="text" id="address" [(ngModel)]= userData.address name="telefono" class="form-control">
+          </div>
+
+          <input type="button" (click)="addUser()" value="Añadir Usuario" class="btn btn-primary">
+
+      </form>
+  </div>
+</div>

@@ -10,10 +10,19 @@ export class UserListComponent implements OnInit {
 
   public users: any;
 
+  data: any;
+
   constructor( private api: ApiService) { }
 
   getUsers() {
     this.api.getUsers$().subscribe(response => this.users = response);
+  }
+
+  deleteUser(id: string){
+    this.api.deleteUser$(id).subscribe(data => {
+      this.data = data;
+      this.getUsers();
+    });
   }
 
   ngOnInit() {

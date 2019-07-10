@@ -31,9 +31,24 @@ export class ApiService {
   }
 
   addUser$(user: User) {
-    return this.http.post<User>('http://localhost:3000/customer', user)
+    return this.http.post<User>('http://localhost:3000/c', user)
       .pipe(tap( (user: User) => console.log(`edited member: id=${user.id}`) ),
         catchError( error => { console.log(error); return throwError(error); } )
       );
   }
+
+  deleteUser$(id: string) {
+    return this.http.delete(`http://localhost:3000/user/${id}`);
+  }
+
+  editMember$(user: User) {
+    return this.http.put<User>('http://localhost:3000/user', user)
+      .pipe(tap((member: User) => console.log(`edited user: id=${user.id}`)),
+            catchError(error => {
+              console.log(error);
+              return throwError(error);  // coger los errores que produce el observable
+            })
+          );
+  }
+
 }

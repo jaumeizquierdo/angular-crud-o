@@ -38,8 +38,10 @@ export class UserAddComponent implements OnInit {
   }
 
   addUser() {
+
     this.user = Object.assign({}, this.userData);
-    this.api.addUser$(this.user).subscribe(response => { const id = response.id; this.router.navigate(['/user', id]); },
+    this.api.addUser$(this.user).subscribe(response => { const id = response.id;
+      this.router.navigate(['/user', id]); }, // router redirecciona a la ficha de usuario
       (err) => {console.log(err); });
   }
 
